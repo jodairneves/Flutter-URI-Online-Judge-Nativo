@@ -18,7 +18,7 @@ class Page1018 extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Padding(
-            padding: EdgeInsets.fromLTRB(10.0, 10.0, 10.0, 10.0),
+            padding: EdgeInsets.all(10.0),
             child: Container(
               width: 140.0,
               height: 100.0,

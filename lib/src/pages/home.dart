@@ -24,15 +24,13 @@ class _HomeState extends State<Home> {
   dynamic _result;
 
   Future _getResult(String str) async {
-    var value;
     try {
       if (str == '1001') {
         _result = await platform.invokeMethod(str);
         Navigator.pushNamed(context, 'page_1001', arguments: _result);
       } else if (str == '1009') {
-        value = await platform.invokeMethod(str);
-        _result = ('R\$ ${value.toStringAsFixed(2)}');
-        Navigator.pushNamed(context, 'page_1009', arguments: _result);
+        List<dynamic> lista = await platform.invokeMethod(str);
+        Navigator.pushNamed(context, 'page_1009', arguments: lista);
       } else if (str == '1018') {
         List<dynamic> lista = await platform.invokeMethod(str);
         Navigator.pushNamed(context, 'page_1018', arguments: lista);
